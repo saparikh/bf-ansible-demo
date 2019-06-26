@@ -21,6 +21,7 @@ This repository contains example playbooks that show how to use Batfish in conju
 - Install the latest version of Pybatfish & dependencies (we recommend you do this in a virtual environment)
 
   `python -m pip install --upgrade git+https://github.com/batfish/pybatfish.git`
+  
   `python -m pip install --upgrade -r requirements.txt`
   
 - Install the latest version of the `batfish.base` role from Ansible Galaxy.

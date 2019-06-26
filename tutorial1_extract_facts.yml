@@ -16,7 +16,7 @@
     - name: Setup connection to Batfish service
       bf_session:
         host: "{{ batfish_server }}"
-        name: local_batfish
+        name: remote_batfish
 
     - name: Initialize the example network
       bf_init_snapshot:

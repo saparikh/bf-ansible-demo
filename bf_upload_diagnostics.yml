@@ -5,6 +5,9 @@
   roles:
     - batfish.base
 
+  vars:
+    - batfish_server: 10.42.0.1
+
   vars_prompt:
   - name: network
     prompt: "What is the name of your network?"
@@ -23,12 +26,10 @@
   - name: Execute Batfish related tasks in a block that is "delegate_to -> localhost" and "run_once -> true"
     block:
 
-    - include_tasks: batfish_docker_start.yml
-
     - name: Setup connection to Batfish service
       bf_session:
-        host: localhost
-        name: local_batfish
+        host: "{{ batfish_server }}"
+        name: remote_batfish
 
     - name: Collect diagnostics
       bf_upload_diagnostics:
@@ -41,8 +42,6 @@
     - name: Print diagnostics action summary
       debug:
         var: diag_action.summary
-
-    - include_tasks: batfish_docker_stop.yml
 
     delegate_to: localhost
     run_once: true

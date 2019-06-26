@@ -22,7 +22,7 @@
       bf_init_snapshot:
         network: example_network
         snapshot: example_snapshot
-        snapshot_data: ../networks/example
+        snapshot_data: ./networks/example
         overwrite: true
 
     - name: Validate that a service is reachable from outside the network

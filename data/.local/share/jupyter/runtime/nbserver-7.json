@@ -1,0 +1,11 @@
+{
+  "base_url": "/",
+  "hostname": "0.0.0.0",
+  "notebook_dir": "/notebooks",
+  "password": false,
+  "pid": 7,
+  "port": 8888,
+  "secure": false,
+  "token": "b9460c4084f719ccd6c37f899e6f6572bc34130979886dd7",
+  "url": "http://0.0.0.0:8888/"
+}

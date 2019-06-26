@@ -6,7 +6,7 @@
     - batfish.base
     
   vars:
-    - batfish-server: 10.42.0.1
+    - batfish_server: 10.42.0.1
 
   tasks:
 
@@ -15,7 +15,7 @@
 
     - name: Setup connection to Batfish service
       bf_session:
-        host: "{{ batfish-server }}"
+        host: "{{ batfish_server }}"
         name: local_batfish
 
     - name: Initialize the example network

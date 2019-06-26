@@ -4,17 +4,18 @@
   gather_facts: no
   roles:
     - batfish.base
+    
+  vars:
+    - batfish_server: 10.42.0.1
 
   tasks:
 
   - name: Execute Batfish related tasks in a block that is "delegate_to -> localhost" and "run_once -> true"
     block:
 
-    - include_tasks: batfish_docker_start.yml
-
     - name: Setup connection to Batfish service
       bf_session:
-        host: localhost
+        host: "{{ batfish_server }}"
         name: local_batfish
 
     - name: Initialize the example network
@@ -42,8 +43,6 @@
           label: " {{item.key}}.NTP "
 
       when: bf_facts.failed|bool == false
-
-    - include_tasks: batfish_docker_stop.yml
 
     delegate_to: localhost
     run_once: true

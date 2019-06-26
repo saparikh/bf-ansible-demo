@@ -8,20 +8,6 @@
   vars:
     - batfish_server: 10.42.0.1
 
-  vars_prompt:
-  - name: network
-    prompt: "What is the name of your network?"
-    private: no
-  - name: snapshot
-    prompt: "What is the name of your snapshot?"
-    private: no
-  - name: dry_run
-    prompt: "Would you like to do a dry run? (skip upload)"
-    private: no
-  - name: contact_info
-    prompt: "What contact info would you like associated with your diagnostics? (optional)"
-    private: no
-
   tasks:
   - name: Execute Batfish related tasks in a block that is "delegate_to -> localhost" and "run_once -> true"
     block:

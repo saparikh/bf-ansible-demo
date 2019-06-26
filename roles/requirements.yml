@@ -1,2 +1,8 @@
+---
 # from galaxy
-- src: batfish.base
+#- src: batfish.base
+
+- name: batfish.base
+  src: https://github.com/batfish/ansible
+  scm: git
+  version: master

@@ -1,6 +1,6 @@
-# Tutorials for the batfish.base role
+# Ansible Tower tutorials for the batfish.base role
 
-This repository contains example playbooks that show how to use Batfish in conjunction with Ansible.
+This repository contains example playbooks that you can use in conjunction with Ansible Tower.
 
 - [tutorial1_extract_facts.yml](playbooks/tutorial1_extract_facts.yml): Shows how to retrieve facts about network devices
 
@@ -18,29 +18,26 @@ This repository contains example playbooks that show how to use Batfish in conju
 
 - Ensure that the remote Batfish server is accessible from your machine.
 
-- Install the latest version of Pybatfish & dependencies (we recommend you do this in a virtual environment)
+- On your Ansible Tower server(s) install the latest version of Pybatfish & dependencies (we recommend you do this in a virtual environment)
 
   `python -m pip install --upgrade git+https://github.com/batfish/pybatfish.git`
   
   `python -m pip install --upgrade -r requirements.txt`
   
-- Install the latest version of the `batfish.base` role from Ansible Galaxy.
-
-  `ansible-galaxy install --force batfish.base`
-  - If you encounter any issues related to SSL certificates use the `-c` option. 
-  
 
 ## Running a tutorial
 
-We highly recommend that you run the tutorials in a Python 3 virtual environment. Details on how to set one up can be found [here](https://docs.python.org/3/library/venv.html).
+- Import this repository as a project in Ansible Tower
+- Create a job template for the playbook that you want to use
+  - Select the virtual environment in which you installed Pybatfish and associated dependencies.
+  - You will need to pass in the address or FQDN for the batfish server in the job template as an `Extra Variable`
+  
+     `batfish_server: <name or IP address of server running Batfish or Batfish Enterprise>`
+  
 
-Run specific tutorials via
+Each playbook is a standalone tutorial, it does not depend on other tutorials having been run first. So feel free to execute them in whatever order you think is best.
 
-  `ansible-playbook -i inventory tutorial1_extract_facts.yml`
-
-   Each playbook is a standalone tutorial, it does not depend on other tutorials having been run first. So feel free to execute them in whatever order you think is best.
-
-   Batfish is designed to provide complete network analysis, which is why all tasks calling Batfish modules should set `delegate_to: localhost` and `run_once: true`. The tutorials are set up that way, so you can incorporate non-Batfish tasks that need to run across other hosts in your inventory.
+Batfish is designed to provide complete network analysis, which is why all tasks calling Batfish modules should set `delegate_to: localhost` and `run_once: true`. The tutorials are set up that way, so you can incorporate non-Batfish tasks that need to run across other hosts in your inventory.
 
 
 ## Documentation

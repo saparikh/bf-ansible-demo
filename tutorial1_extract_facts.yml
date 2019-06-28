@@ -5,9 +5,6 @@
   roles:
     - batfish.base
     
-  vars:
-    - batfish_server: 10.42.0.1
-
   tasks:
 
   - name: Execute Batfish related tasks in a block that is "delegate_to -> localhost" and "run_once -> true"

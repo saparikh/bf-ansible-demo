@@ -4,8 +4,6 @@
   gather_facts: no
   roles:
     - batfish.base
-  vars:
-    - batfish_server: 10.42.0.1
 
   tasks:
 

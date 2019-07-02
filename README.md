@@ -2,17 +2,17 @@
 
 This repository contains example playbooks that you can use in conjunction with Ansible Tower.
 
-- [tutorial1_extract_facts.yml](playbooks/tutorial1_extract_facts.yml): Shows how to retrieve facts about network devices
+- [tutorial1_extract_facts.yml](tutorial1_extract_facts.yml): Shows how to retrieve facts about network devices
 
-- [tutorial2_validate_facts.yml](playbooks/tutorial2_validate_facts.yml): Shows how to validate facts about network devices
+- [tutorial2_validate_facts.yml](tutorial2_validate_facts.yml): Shows how to validate facts about network devices
 
-- [tutorial3_validate_forwarding.yml](playbooks/tutorial3_validate_forwarding.yml): Shows how to validate the routing and forwarding behavior of the network
+- [tutorial3_validate_forwarding.yml](tutorial3_validate_forwarding.yml): Shows how to validate the routing and forwarding behavior of the network
 
-- [tutorial4_validate_acls.yml](playbooks/tutorial4_validate_acls.yml): Shows how to validate the behavior of a packet filter(ACL/Firewall rule) 
+- [tutorial4_validate_acls.yml](tutorial4_validate_acls.yml): Shows how to validate the behavior of a packet filter(ACL/Firewall rule) 
 
-- [tutorial5_validate_bgp_sessions.yml](playbooks/tutorial5_validate_bgp_sessions.yml): Shows how to validate configuration attributes to find mis-configured BGP sessions and undefined references
+- [tutorial5_validate_bgp_sessions.yml](tutorial5_validate_bgp_sessions.yml): Shows how to validate configuration attributes to find mis-configured BGP sessions and undefined references
 
-- [bf_upload_diagnostics.yml](playbooks/bf_upload_diagnostics.yml): Shows how to upload diagnostic information about your snapshot in the event of issues (e.g. if Batfish fails to fully recognized some lines in your input files)
+- [bf_upload_diagnostics.yml](bf_upload_diagnostics.yml): Shows how to upload diagnostic information about your snapshot in the event of issues (e.g. if Batfish fails to fully recognized some lines in your input files)
 
 ## Setup
 
